@@ -1,0 +1,117 @@
+.criar-pensamentos {
+  padding: 2rem 0;
+}
+
+.criar-pensamentos form {
+  background: #C4EDFF;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+/* Inputs */
+.criar-pensamentos form label {
+  color: #154580;
+  font-weight: bold;
+  margin: 0 0 1rem;
+}
+
+.input, .textarea {
+  border: none;
+  height: 40px;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  margin: 0.5rem 0 2rem;
+}
+
+.textarea {
+  height: auto;
+}
+
+/* MODELOS (radios) EM LINHA */
+.container-radio {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.radio-modelo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+input[type='radio'] {
+  display: none;
+}
+
+/* Radio custom */
+.custom-radio {
+  border: 2px solid #154580;
+  width: 28px;
+  height: 28px;
+  display: grid;
+  place-content: center;
+  border-radius: 50%;
+}
+
+.custom-radio span {
+  width: 16px;
+  height: 16px;
+  background: transparent;
+  border-radius: 50%;
+  transition: .3s;
+}
+
+input[type='radio']:checked + .custom-radio span {
+  background: #154580;
+}
+
+/* PRÉVIAS — EM LINHA */
+.previas {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.modelo {
+  background-color: #F8F9FE;
+  padding: 1rem;
+  max-width: 250px;
+  width: 100%;
+  border-radius: 12px;
+}
+
+.modelo img {
+  width: 50px;
+}
+
+.modelo .conteudo {
+  margin: 1rem 0;
+}
+
+/* Sombras dos modelos */
+.modelo1 { box-shadow: 8px 8px 0px #154580; }
+.modelo2 { box-shadow: 8px 8px 0px #6BD1FF; }
+.modelo3 { box-shadow: 8px 8px 0px #84EEC1; }
+
+/* Botões */
+.acoes {
+  display: flex;
+  justify-content: center;
+}
+
+.botao {
+  margin: 5px;
+  margin-top: 70px;
+  width: 200px;
+}
+
+@media (max-width: 768px) {
+  .previas {
+    justify-content: center;
+  }
+}

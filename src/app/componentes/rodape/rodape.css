@@ -1,0 +1,42 @@
+.rodape {
+  background:
+    linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)),
+    url(/assets/fundo-rodape.png);
+  background-size: cover;
+  background-position: center;
+  background-color: #0A0A0A; /* fallback */
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  gap: 1rem;
+}
+
+.texto-copyright {
+  grid-column: 1 / 2;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.logo-rodape {
+  grid-column: 2 / 3;
+  justify-self: center;
+  width: 120px;
+  max-width: 100%;
+}
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+  .rodape {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+
+  .logo-rodape {
+    order: -1; /* logo acima no mobile */
+    margin-bottom: 1rem;
+  }
+}
