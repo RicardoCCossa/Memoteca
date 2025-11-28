@@ -3,4 +3,13 @@
       <h2 class="ff-inter">Meu Mural</h2>
       <button class="botao" routerLink="/criarPensamento" >Adicionar pensamento</button>
     </header>
+
+    <div class="mural">
+      @for (pensamento of listarPensamento; track $index) {
+          <app-pensamento></app-pensamento>
+      } @empty {
+        <p>Nenhum mural de pensamento encontrado.</p>
+      }
+        
+    </div>
 </section>
