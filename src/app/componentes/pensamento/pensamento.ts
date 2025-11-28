@@ -1,15 +1,19 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-pensamento',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule],
   templateUrl: './pensamento.html',
   styleUrl: './pensamento.css',
 })
 export class Pensamento {
-  pensamento = {
-    conteudo: "Angular",
-    autoria: "Ricardo",
-    modelo: "modelo3"
+   @Input() pensamento: any;
+
+  larguraPensamento(){
+    return this.pensamento.conteudo.length >= 256 
+      ? "pensamento-g"
+      : "pensamento-p";
   }
 }
