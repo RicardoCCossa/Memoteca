@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input} from '@angular/core';
+import { PensamentoModel } from '../pensamento';
 
 @Component({
   selector: 'app-pensamento',
@@ -9,7 +10,7 @@ import { Component, Input} from '@angular/core';
   styleUrl: './pensamento.css',
 })
 export class Pensamento {
-   @Input() pensamento: any;
+   @Input() pensamento!: PensamentoModel;
 
   larguraPensamento(){
     return this.pensamento.conteudo.length >= 256 

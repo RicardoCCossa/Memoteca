@@ -1,4 +1,4 @@
-export interface Pensamento {
+export interface PensamentoModel {
   id: number
   conteudo: string
   autoria: string
